@@ -3,8 +3,10 @@ package com.dily;
 import oracle.jdbc.pool.OracleDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * Created by Andra on 5/7/2017.
@@ -28,4 +30,6 @@ public class DilyConfig {
         dataSource.setFastConnectionFailoverEnabled(true);
         return dataSource;
     }
+
+
 }

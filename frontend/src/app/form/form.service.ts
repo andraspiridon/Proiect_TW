@@ -18,7 +18,7 @@ export class FormService{
     var header =  new Headers();
     header.append('Content-Type','application/x-www-form-urlencoded');
 
-    return this._http.post('http://validate.jsontest.com', params, { headers: header }).map(res=>res.json());
+    return this._http.post('http://localhost:4200/api/login', params, { headers: header }).map(res=>res.json());
   }
 
 }
