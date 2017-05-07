@@ -2,17 +2,15 @@ package com.dily.controllers;
 
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 /**
  * Created by Andra on 5/1/2017.
  */
-@Controller
-@RequestMapping("/api")
-public class HelloController {
+@RestController
+@CrossOrigin(value = "http://localhost:4200")
+public class UserController {
 
     @RequestMapping(value = {"json"},method = RequestMethod.GET)
     @ResponseBody
