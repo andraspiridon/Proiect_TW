@@ -12,13 +12,15 @@ export class FormService{
       .map(res => res.json());
   }
   postJSON(myform){
+    console.log(myform.username);
+    console.log(myform.password);
     var json = JSON.stringify({username:myform.username,password:myform.password});
-    var params = 'json=' + json;
+    var params = '' + json;
 
     var header =  new Headers();
-    header.append('Content-Type','application/x-www-form-urlencoded');
-
-    return this._http.post('http://localhost:4200/api/login', params, { headers: header }).map(res=>res.json());
+    header.append('Content-Type','application/json');
+    console.log(params);
+    return this._http.post('http://localhost:8072/api/login',  json, { headers: header }).map(res=>res.json());
   }
 
 }
